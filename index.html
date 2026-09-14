@@ -2,319 +2,313 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-  >
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="format-detection" content="telephone=no">
 
   <title>Ofrendas y Donaciones | Iglesia Jesucristo Rey y Señor</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
     }
 
-    html {
-      background: #08192f;
+    html{
+      background:#071b34;
     }
 
-    body {
-      min-height: 100vh;
-      font-family: Arial, Helvetica, sans-serif;
+    body{
+      min-height:100vh;
+      font-family:Arial, Helvetica, sans-serif;
+      color:#fff;
       background:
-        radial-gradient(circle at top, #1a3b68 0%, #102b50 38%, #08192f 100%);
-      color: white;
-      padding: 26px 18px 35px;
+        radial-gradient(circle at top, #14518f 0%, #0c3561 38%, #071b34 100%);
+      padding:22px 16px 34px;
     }
 
-    .page {
-      width: 100%;
-      max-width: 480px;
-      margin: 0 auto;
+    .page{
+      width:100%;
+      max-width:500px;
+      margin:0 auto;
     }
 
     /* LOGO */
 
-    .logo {
-      display: block;
-      width: 92px;
-      height: 92px;
-      object-fit: contain;
-      margin: 0 auto 14px;
+    .logo{
+      display:block;
+      width:76px;
+      height:76px;
+      object-fit:contain;
+      margin:0 auto 8px;
     }
 
-    /* ENCABEZADO */
-
-    .header {
-      text-align: center;
+    .church{
+      text-align:center;
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:2.4px;
+      line-height:1.45;
     }
 
-    .church {
-      font-size: 13px;
-      letter-spacing: 2.6px;
-      font-weight: 700;
-      line-height: 1.5;
+    /* HERO */
+
+    .hero{
+      text-align:center;
+      margin-top:16px;
     }
 
-    .eyebrow {
-      margin-top: 21px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-style: italic;
-      color: #d4deeb;
-      font-size: 16px;
+    .eyebrow{
+      font-family:Georgia, "Times New Roman", serif;
+      font-style:italic;
+      color:#d8e3ef;
+      font-size:15px;
+      margin-bottom:4px;
     }
 
-    h1 {
-      margin-top: 5px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 43px;
-      line-height: 1.02;
-      font-weight: 400;
-      letter-spacing: -1px;
+    h1{
+      font-family:Georgia, "Times New Roman", serif;
+      font-weight:400;
+      font-size:40px;
+      line-height:.98;
+      letter-spacing:-1px;
     }
 
-    .subtitle {
-      margin: 13px auto 0;
-      max-width: 390px;
-      color: #afc0d5;
-      font-size: 14px;
-      line-height: 1.55;
+    .subtitle{
+      color:#b8c9da;
+      font-size:13px;
+      line-height:1.4;
+      max-width:360px;
+      margin:10px auto 0;
     }
 
-    /* TARJETA */
+    /* BANK CARD */
 
-    .card {
-      margin-top: 24px;
-      padding: 25px 22px 22px;
-      border-radius: 24px;
-      background: rgba(255, 255, 255, 0.075);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      box-shadow: 0 20px 55px rgba(0, 0, 0, 0.22);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+    .bank-card{
+      margin-top:20px;
+      background:#fff;
+      border-radius:24px;
+      padding:22px 18px 18px;
+      color:#102949;
+      box-shadow:0 18px 50px rgba(0,0,0,.24);
     }
 
-    .bank {
-      color: #b8d4fb;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      margin-bottom: 22px;
+    .bank-name{
+      text-align:center;
+      font-size:25px;
+      font-weight:900;
+      letter-spacing:1.5px;
+      color:#154c86;
+      margin-bottom:18px;
     }
 
-    .data-block {
-      margin-bottom: 20px;
+    .bank-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:17px 0;
+      border-top:1px solid #dce5ef;
     }
 
-    .label {
-      color: #91a8c3;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1.8px;
-      margin-bottom: 7px;
+    .info{
+      min-width:0;
+      flex:1;
     }
 
-    .value {
-      color: #ffffff !important;
-      text-decoration: none !important;
-      font-size: 27px;
-      line-height: 1;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      margin-bottom: 14px;
-      -webkit-text-fill-color: #ffffff;
+    .label{
+      color:#6d8198;
+      font-size:11px;
+      letter-spacing:1.4px;
+      text-transform:uppercase;
+      margin-bottom:5px;
     }
 
-    .rnc-value {
-      font-size: 23px;
+    .value{
+      color:#0c2444 !important;
+      -webkit-text-fill-color:#0c2444;
+      text-decoration:none !important;
+      font-size:24px;
+      font-weight:800;
+      line-height:1;
+      white-space:nowrap;
     }
 
-    button {
-      width: 100%;
-      min-height: 54px;
-      border: 0;
-      border-radius: 14px;
-      background: #ffffff;
-      color: #10294a;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.15px;
-      cursor: pointer;
-      padding: 14px 16px;
-      transition: transform 0.15s ease, opacity 0.15s ease;
+    .copy-btn{
+      flex:0 0 auto;
+      border:none;
+      border-radius:12px;
+      padding:13px 16px;
+      background:#eaf3fb;
+      color:#0b5fa9;
+      font-size:12px;
+      font-weight:800;
+      cursor:pointer;
     }
 
-    button:active {
-      transform: scale(0.98);
-      opacity: 0.93;
+    .copy-btn:active{
+      transform:scale(.97);
     }
 
-    .divider {
-      height: 1px;
-      background: rgba(255,255,255,.10);
-      margin: 22px 0;
+    /* VERSE */
+
+    .verse{
+      margin-top:20px;
+      padding:18px 16px;
+      border-radius:18px;
+      border:1px solid rgba(88,166,240,.28);
+      background:rgba(7,32,61,.42);
+      text-align:center;
     }
 
-    /* MENSAJE FINAL */
-
-    .message {
-      text-align: center;
-      max-width: 360px;
-      margin: 22px auto 0;
-      color: #c3cfdd;
-      font-family: Georgia, "Times New Roman", serif;
-      font-style: italic;
-      font-size: 14px;
-      line-height: 1.55;
+    .verse-text{
+      font-family:Georgia, "Times New Roman", serif;
+      font-style:italic;
+      color:#dde6ef;
+      font-size:14px;
+      line-height:1.5;
     }
 
-    .footer {
-      text-align: center;
-      margin-top: 22px;
-      color: #758aa4;
-      font-size: 10px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
+    .verse-ref{
+      margin-top:8px;
+      color:#67a9e6;
+      font-size:10px;
+      letter-spacing:1.8px;
+      text-transform:uppercase;
     }
 
-    /* NOTIFICACIÓN COPIADO */
-
-    #toast {
-      position: fixed;
-      z-index: 1000;
-      left: 50%;
-      bottom: 25px;
-      transform: translateX(-50%) translateY(20px);
-      background: white;
-      color: #10294a;
-      padding: 12px 18px;
-      border-radius: 50px;
-      font-size: 13px;
-      font-weight: 700;
-      opacity: 0;
-      visibility: hidden;
-      transition: 0.25s ease;
-      box-shadow: 0 12px 35px rgba(0,0,0,.28);
-      white-space: nowrap;
+    .footer{
+      margin-top:18px;
+      text-align:center;
+      color:#748ba4;
+      font-size:9px;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
     }
 
-    #toast.show {
-      opacity: 1;
-      visibility: visible;
-      transform: translateX(-50%) translateY(0);
+    /* TOAST */
+
+    #toast{
+      position:fixed;
+      left:50%;
+      bottom:24px;
+      transform:translateX(-50%) translateY(20px);
+      background:#fff;
+      color:#102949;
+      padding:12px 18px;
+      border-radius:40px;
+      font-size:13px;
+      font-weight:700;
+      opacity:0;
+      visibility:hidden;
+      transition:.25s;
+      box-shadow:0 12px 30px rgba(0,0,0,.25);
+      white-space:nowrap;
     }
 
-    /* OPTIMIZACIÓN PARA CELULAR */
+    #toast.show{
+      opacity:1;
+      visibility:visible;
+      transform:translateX(-50%) translateY(0);
+    }
 
-    @media (max-width: 600px) {
+    /* MOBILE */
 
-      body {
-        padding: 18px 16px 28px;
+    @media(max-width:600px){
+
+      body{
+        padding:20px 14px 30px;
       }
 
-      .logo {
-        width: 70px;
-        height: 70px;
-        margin-bottom: 9px;
+      .logo{
+        width:68px;
+        height:68px;
       }
 
-      .church {
-        font-size: 11px;
-        letter-spacing: 2.2px;
+      .hero{
+        margin-top:13px;
       }
 
-      .eyebrow {
-        margin-top: 15px;
-        font-size: 14px;
+      .eyebrow{
+        font-size:14px;
       }
 
-      h1 {
-        font-size: 38px;
-        margin-top: 3px;
+      h1{
+        font-size:36px;
       }
 
-      .subtitle {
-        margin-top: 9px;
-        font-size: 13px;
-        line-height: 1.45;
+      .subtitle{
+        font-size:12.5px;
+        margin-top:8px;
       }
 
-      .card {
-        margin-top: 18px;
-        padding: 22px 19px 20px;
-        border-radius: 22px;
+      .bank-card{
+        margin-top:17px;
+        padding:20px 17px 16px;
       }
 
-      .bank {
-        margin-bottom: 18px;
-        font-size: 13px;
+      .bank-name{
+        font-size:23px;
+        margin-bottom:15px;
       }
 
-      .value {
-        font-size: 26px;
+      .bank-row{
+        padding:15px 0;
       }
 
-      .rnc-value {
-        font-size: 22px;
+      .value{
+        font-size:22px;
       }
 
-      button {
-        min-height: 52px;
-        font-size: 12px;
+      .copy-btn{
+        padding:12px 14px;
+        font-size:11.5px;
       }
 
-      .divider {
-        margin: 19px 0;
+      .verse{
+        margin-top:17px;
+        padding:16px 14px;
       }
 
-      .message {
-        margin-top: 18px;
-        font-size: 13px;
+      .verse-text{
+        font-size:13px;
       }
     }
 
-    /* TELÉFONOS PEQUEÑOS */
+    @media(max-width:380px){
 
-    @media (max-width: 380px) {
-
-      h1 {
-        font-size: 34px;
+      h1{
+        font-size:33px;
       }
 
-      .value {
-        font-size: 24px;
+      .value{
+        font-size:20px;
       }
 
-      .card {
-        padding-left: 17px;
-        padding-right: 17px;
+      .copy-btn{
+        padding:11px 12px;
+        font-size:11px;
       }
     }
   </style>
 </head>
 
-
 <body>
 
   <main class="page">
 
-    <header class="header">
+    <img
+      class="logo"
+      src="LOGO OPTIMIZADO.png"
+      alt="Iglesia Jesucristo Rey y Señor"
+    >
 
-      <img
-        class="logo"
-        src="LOGO OPTIMIZADO.png"
-        alt="Logo Iglesia Jesucristo Rey y Señor"
-      >
+    <div class="church">
+      IGLESIA JESUCRISTO<br>
+      REY Y SEÑOR
+    </div>
 
-      <div class="church">
-        IGLESIA JESUCRISTO<br>
-        REY Y SEÑOR
-      </div>
+    <section class="hero">
 
       <div class="eyebrow">
         Una forma sencilla de aportar
@@ -329,59 +323,61 @@
         Gracias por contribuir y ser parte de la obra que Dios está haciendo.
       </p>
 
-    </header>
+    </section>
 
+    <section class="bank-card">
 
-    <section class="card">
-
-      <div class="bank">
+      <div class="bank-name">
         BANRESERVAS
       </div>
 
+      <div class="bank-row">
 
-      <div class="data-block">
-
-        <div class="label">
-          Número de cuenta
+        <div class="info">
+          <div class="label">Número de cuenta</div>
+          <div class="value">9605763918</div>
         </div>
 
-        <div class="value">
-          9605763918
-        </div>
-
-        <button onclick="copiar('9605763918', 'Número de cuenta copiado')">
-          COPIAR NÚMERO DE CUENTA
+        <button
+          class="copy-btn"
+          onclick="copiar('9605763918','Cuenta copiada')"
+        >
+          COPIAR
         </button>
 
       </div>
 
+      <div class="bank-row">
 
-      <div class="divider"></div>
-
-
-      <div class="data-block" style="margin-bottom:0;">
-
-        <div class="label">
-          RNC
+        <div class="info">
+          <div class="label">RNC</div>
+          <div class="value">430144894</div>
         </div>
 
-        <div class="value rnc-value">
-          430144894
-        </div>
-
-        <button onclick="copiar('430144894', 'RNC copiado')">
-          COPIAR RNC
+        <button
+          class="copy-btn"
+          onclick="copiar('430144894','RNC copiado')"
+        >
+          COPIAR
         </button>
 
       </div>
 
     </section>
 
+    <section class="verse">
 
-    <p class="message">
-      “Dios bendiga cada semilla sembrada con amor.”
-    </p>
+      <div class="verse-text">
+        “Cada uno dé como propuso en su corazón,
+        no con tristeza ni por necesidad,
+        porque Dios ama al dador alegre.”
+      </div>
 
+      <div class="verse-ref">
+        2 Corintios 9:7
+      </div>
+
+    </section>
 
     <div class="footer">
       Iglesia Jesucristo Rey y Señor
@@ -389,56 +385,44 @@
 
   </main>
 
-
-  <div id="toast">
-    Copiado ✓
-  </div>
-
+  <div id="toast">Copiado ✓</div>
 
   <script>
+    async function copiar(texto, mensaje){
 
-    async function copiar(texto, mensaje) {
-
-      try {
-
+      try{
         await navigator.clipboard.writeText(texto);
-
         mostrarToast(mensaje + " ✓");
+      }catch(e){
 
-      } catch (error) {
+        const area = document.createElement("textarea");
 
-        const temporal = document.createElement("textarea");
+        area.value = texto;
+        area.style.position = "fixed";
+        area.style.opacity = "0";
 
-        temporal.value = texto;
-        temporal.style.position = "fixed";
-        temporal.style.opacity = "0";
+        document.body.appendChild(area);
 
-        document.body.appendChild(temporal);
-
-        temporal.select();
-
+        area.select();
         document.execCommand("copy");
 
-        temporal.remove();
+        area.remove();
 
         mostrarToast(mensaje + " ✓");
       }
     }
 
-
-    function mostrarToast(mensaje) {
+    function mostrarToast(mensaje){
 
       const toast = document.getElementById("toast");
 
       toast.textContent = mensaje;
-
       toast.classList.add("show");
 
       setTimeout(() => {
         toast.classList.remove("show");
       }, 1800);
     }
-
   </script>
 
 </body>
