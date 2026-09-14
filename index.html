@@ -74,7 +74,7 @@
 
 
     /* =========================
-       TITULO
+       ENCABEZADO
     ========================= */
 
     .hero{
@@ -93,47 +93,48 @@
     h1{
       font-family:Georgia, "Times New Roman", serif;
       font-weight:400;
-
       font-size:39px;
       line-height:.98;
-
       letter-spacing:-1px;
-
       margin:0;
     }
 
     .description{
       max-width:360px;
-
       margin:10px auto 0;
-
       font-size:13px;
       line-height:1.4;
-
       color:#b7c8db;
     }
 
 
     /* =========================
-       TARJETA BANCO
+       TARJETA TRANSLÚCIDA
     ========================= */
 
     .card{
       margin-top:19px;
 
-      background:rgba(39,69,105,.82);
+      /* Cristal transparente */
+      background:rgba(255,255,255,0.055);
 
-      border:1px solid rgba(255,255,255,.18);
+      border:1px solid rgba(255,255,255,0.20);
       border-radius:24px;
 
       padding:22px 19px;
 
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+
       box-shadow:
-        0 18px 45px rgba(0,0,0,.18);
+        inset 0 1px 0 rgba(255,255,255,0.08),
+        0 14px 35px rgba(0,0,0,0.12);
     }
 
 
-    /* FILA CUENTA */
+    /* =========================
+       CUENTA
+    ========================= */
 
     .account-row{
       display:flex;
@@ -147,35 +148,29 @@
     }
 
     .label{
-      color:#9fb5ce;
-
+      color:#a9bed5;
       font-size:11px;
-
       letter-spacing:1.8px;
       text-transform:uppercase;
-
       margin-bottom:7px;
     }
 
     .number{
       color:#ffffff !important;
-
       -webkit-text-fill-color:#ffffff !important;
-
       text-decoration:none !important;
 
       font-size:27px;
       font-weight:800;
-
       line-height:1;
-
       letter-spacing:.5px;
-
       white-space:nowrap;
     }
 
 
-    /* LOGO BANRESERVAS */
+    /* =========================
+       LOGO BANRESERVAS
+    ========================= */
 
     .bank-logo{
       width:52px;
@@ -186,32 +181,36 @@
       flex:0 0 52px;
 
       background:transparent;
-
       border:none;
-
       padding:0;
     }
 
 
-    /* BOTONES */
+    /* =========================
+       BOTONES
+    ========================= */
 
     .copy-button{
       width:100%;
 
       margin-top:17px;
 
-      border:none;
+      border:1px solid rgba(255,255,255,.85);
       border-radius:15px;
 
-      background:#ffffff;
+      background:rgba(255,255,255,.96);
       color:#102d50;
 
-      padding:17px 14px;
+      padding:16px 14px;
 
       font-size:13px;
       font-weight:800;
+      letter-spacing:.1px;
 
       cursor:pointer;
+
+      box-shadow:
+        0 8px 20px rgba(0,0,0,.08);
 
       transition:
         transform .15s ease,
@@ -220,22 +219,26 @@
 
     .copy-button:active{
       transform:scale(.98);
-      opacity:.92;
+      opacity:.90;
     }
 
 
-    /* SEPARADOR */
+    /* =========================
+       SEPARADOR
+    ========================= */
 
     .divider{
       height:1px;
 
-      background:rgba(255,255,255,.14);
+      background:rgba(255,255,255,.16);
 
       margin:22px 0;
     }
 
 
-    /* RNC */
+    /* =========================
+       RNC
+    ========================= */
 
     .rnc-number{
       font-size:25px;
@@ -248,13 +251,11 @@
 
     .footer{
       text-align:center;
-
       padding:21px 5px 0;
     }
 
     .blessing{
       font-family:Georgia, "Times New Roman", serif;
-
       font-style:italic;
 
       color:#d2dce8;
@@ -278,7 +279,7 @@
 
 
     /* =========================
-       MENSAJE COPIADO
+       AVISO "COPIADO"
     ========================= */
 
     #toast{
@@ -329,10 +330,7 @@
     @media(max-width:600px){
 
       body{
-        padding:
-          20px
-          14px
-          30px;
+        padding:20px 14px 30px;
       }
 
       .church-logo{
@@ -359,16 +357,19 @@
 
       .description{
         margin-top:8px;
-
         font-size:12.5px;
       }
 
       .card{
         margin-top:17px;
+        padding:20px 17px;
 
-        padding:
-          20px
-          17px;
+        border-radius:22px;
+
+        background:rgba(255,255,255,0.05);
+
+        backdrop-filter:blur(11px);
+        -webkit-backdrop-filter:blur(11px);
       }
 
       .label{
@@ -386,13 +387,11 @@
       .bank-logo{
         width:48px;
         height:48px;
-
         flex-basis:48px;
       }
 
       .copy-button{
         padding:15px 12px;
-
         font-size:12.5px;
       }
 
@@ -428,7 +427,6 @@
       .bank-logo{
         width:43px;
         height:43px;
-
         flex-basis:43px;
       }
 
@@ -443,7 +441,7 @@
   <main class="page">
 
 
-    <!-- IGLESIA -->
+    <!-- LOGO IGLESIA -->
 
     <header class="church-header">
 
@@ -462,7 +460,7 @@
 
 
 
-    <!-- TITULO -->
+    <!-- ENCABEZADO -->
 
     <section class="hero">
 
@@ -484,7 +482,7 @@
 
 
 
-    <!-- DATOS -->
+    <!-- DATOS BANCARIOS -->
 
     <section class="card">
 
@@ -557,7 +555,7 @@
 
 
 
-    <!-- FINAL -->
+    <!-- MENSAJE FINAL -->
 
     <footer class="footer">
 
