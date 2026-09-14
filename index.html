@@ -8,7 +8,6 @@
     content="width=device-width, initial-scale=1.0, viewport-fit=cover"
   >
 
-  <!-- Evita que iPhone convierta la cuenta en teléfono -->
   <meta name="format-detection" content="telephone=no">
   <meta name="theme-color" content="#0d2b50">
 
@@ -133,7 +132,6 @@
     .card{
       margin-top:19px;
 
-      /* Cristal claro */
       background:rgba(255,255,255,0.13);
 
       border:1px solid rgba(255,255,255,0.28);
@@ -202,21 +200,41 @@
 
     /* =================================
        LOGO BANRESERVAS
+       MÁS VISIBLE
     ================================= */
 
     .bank-logo{
-      width:52px;
-      height:52px;
+      width:58px;
+      height:58px;
 
       object-fit:contain;
 
-      flex:0 0 52px;
+      flex:0 0 58px;
 
-      background:transparent;
+      /*
+        Halo translúcido:
+        mejora el contraste de la B azul
+        sin usar un cuadro blanco sólido.
+      */
 
-      border:none;
+      background:rgba(255,255,255,0.14);
 
-      padding:0;
+      border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+      border-radius:50%;
+
+      padding:7px;
+
+      filter:
+        drop-shadow(
+          0 3px 8px
+          rgba(0,0,0,0.12)
+        );
+
+      backdrop-filter:blur(5px);
+      -webkit-backdrop-filter:blur(5px);
     }
 
 
@@ -229,11 +247,14 @@
 
       margin-top:17px;
 
-      border:1px solid rgba(255,255,255,.90);
+      border:
+        1px solid
+        rgba(255,255,255,.90);
 
       border-radius:15px;
 
-      background:rgba(255,255,255,.96);
+      background:
+        rgba(255,255,255,.96);
 
       color:#102d50;
 
@@ -254,7 +275,8 @@
       gap:9px;
 
       box-shadow:
-        0 8px 20px rgba(0,0,0,.08);
+        0 8px 20px
+        rgba(0,0,0,.08);
 
       transition:
         transform .15s ease,
@@ -263,7 +285,6 @@
 
     .copy-button:active{
       transform:scale(.98);
-
       opacity:.90;
     }
 
@@ -295,7 +316,8 @@
     .divider{
       height:1px;
 
-      background:rgba(255,255,255,.22);
+      background:
+        rgba(255,255,255,.22);
 
       margin:22px 0;
     }
@@ -321,7 +343,10 @@
     }
 
     .blessing{
-      font-family:Georgia, "Times New Roman", serif;
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
       font-style:italic;
 
@@ -348,14 +373,13 @@
 
 
     /* =================================
-       MENSAJE COPIADO
+       MENSAJE AL COPIAR
     ================================= */
 
     #toast{
       position:fixed;
 
       left:50%;
-
       bottom:25px;
 
       transform:
@@ -375,7 +399,8 @@
       font-weight:700;
 
       box-shadow:
-        0 12px 30px rgba(0,0,0,.25);
+        0 12px 30px
+        rgba(0,0,0,.25);
 
       opacity:0;
 
@@ -409,6 +434,9 @@
         padding:20px 14px 30px;
       }
 
+
+      /* IGLESIA */
+
       .church-logo{
         width:68px;
         height:68px;
@@ -419,6 +447,9 @@
 
         letter-spacing:2.3px;
       }
+
+
+      /* ENCABEZADO */
 
       .hero{
         margin-top:13px;
@@ -439,7 +470,7 @@
       }
 
 
-      /* CRISTAL CLARO EN CELULAR */
+      /* TARJETA */
 
       .card{
         margin-top:17px;
@@ -468,6 +499,9 @@
           rgba(0,0,0,0.10);
       }
 
+
+      /* DATOS */
+
       .label{
         font-size:10.5px;
       }
@@ -480,13 +514,20 @@
         font-size:23px;
       }
 
+
+      /* LOGO BANRESERVAS */
+
       .bank-logo{
-        width:48px;
+        width:56px;
+        height:56px;
 
-        height:48px;
+        flex-basis:56px;
 
-        flex-basis:48px;
+        padding:7px;
       }
+
+
+      /* BOTONES */
 
       .copy-button{
         padding:15px 12px;
@@ -498,15 +539,20 @@
 
       .copy-icon{
         width:18px;
-
         height:18px;
 
         flex-basis:18px;
       }
 
+
+      /* SEPARADOR */
+
       .divider{
         margin:20px 0;
       }
+
+
+      /* FINAL */
 
       .footer{
         padding-top:18px;
@@ -519,7 +565,9 @@
     }
 
 
-    /* CELULARES MÁS PEQUEÑOS */
+    /* =================================
+       CELULARES PEQUEÑOS
+    ================================= */
 
     @media(max-width:380px){
 
@@ -536,11 +584,12 @@
       }
 
       .bank-logo{
-        width:43px;
+        width:52px;
+        height:52px;
 
-        height:43px;
+        flex-basis:52px;
 
-        flex-basis:43px;
+        padding:6px;
       }
 
       .copy-button{
@@ -558,9 +607,9 @@
   <main class="page">
 
 
-    <!-- =========================
+    <!-- =================================
          IGLESIA
-    ========================== -->
+    ================================== -->
 
     <header class="church-header">
 
@@ -579,9 +628,9 @@
 
 
 
-    <!-- =========================
+    <!-- =================================
          ENCABEZADO
-    ========================== -->
+    ================================== -->
 
     <section class="hero">
 
@@ -603,9 +652,9 @@
 
 
 
-    <!-- =========================
+    <!-- =================================
          DATOS BANCARIOS
-    ========================== -->
+    ================================== -->
 
     <section class="card">
 
@@ -639,7 +688,7 @@
 
 
 
-      <!-- BOTÓN COPIAR CUENTA -->
+      <!-- COPIAR CUENTA -->
 
       <button
         class="copy-button"
@@ -702,7 +751,7 @@
 
 
 
-      <!-- BOTÓN COPIAR RNC -->
+      <!-- COPIAR RNC -->
 
       <button
         class="copy-button"
@@ -752,9 +801,9 @@
 
 
 
-    <!-- =========================
+    <!-- =================================
          MENSAJE FINAL
-    ========================== -->
+    ================================== -->
 
     <footer class="footer">
 
@@ -774,7 +823,7 @@
 
 
 
-  <!-- AVISO AL COPIAR -->
+  <!-- MENSAJE AL COPIAR -->
 
   <div id="toast">
     Copiado ✓
