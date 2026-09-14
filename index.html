@@ -2,294 +2,312 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="format-detection" content="telephone=no">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+  >
+
+  <meta name="theme-color" content="#0d2b50">
 
   <title>Ofrendas y Donaciones | Iglesia Jesucristo Rey y Señor</title>
 
   <style>
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    html{
-      background:#071b34;
+    html {
+      background: #08192f;
     }
 
-    body{
-      min-height:100vh;
-      font-family:Arial, Helvetica, sans-serif;
-      color:#fff;
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
       background:
-        radial-gradient(circle at top, #14518f 0%, #0c3561 38%, #071b34 100%);
-      padding:22px 16px 34px;
+        radial-gradient(circle at top, #183e6b 0%, #0d2b50 42%, #08192f 100%);
+      color: white;
+      padding: 24px 18px 45px;
     }
 
-    .page{
-      width:100%;
-      max-width:500px;
-      margin:0 auto;
+    .page {
+      width: 100%;
+      max-width: 620px;
+      margin: 0 auto;
     }
 
-    /* LOGO */
+    /* LOGO IGLESIA */
 
-    .logo{
-      display:block;
-      width:76px;
-      height:76px;
-      object-fit:contain;
-      margin:0 auto 8px;
+    .church-header {
+      text-align: center;
+      margin-bottom: 22px;
     }
 
-    .church{
-      text-align:center;
-      font-size:11px;
-      font-weight:700;
-      letter-spacing:2.4px;
-      line-height:1.45;
+    .church-logo {
+      width: 92px;
+      height: 92px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 14px;
+    }
+
+    .church-name {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      line-height: 1.5;
+      text-transform: uppercase;
     }
 
     /* HERO */
 
-    .hero{
-      text-align:center;
-      margin-top:16px;
+    .hero {
+      text-align: center;
+      margin-bottom: 28px;
     }
 
-    .eyebrow{
-      font-family:Georgia, "Times New Roman", serif;
-      font-style:italic;
-      color:#d8e3ef;
-      font-size:15px;
-      margin-bottom:4px;
+    .eyebrow {
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      font-size: 20px;
+      color: #d7e0ec;
+      margin-bottom: 5px;
     }
 
-    h1{
-      font-family:Georgia, "Times New Roman", serif;
-      font-weight:400;
-      font-size:40px;
-      line-height:.98;
-      letter-spacing:-1px;
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      font-size: clamp(48px, 10vw, 66px);
+      line-height: 0.96;
+      letter-spacing: -1.5px;
+      margin-bottom: 15px;
     }
 
-    .subtitle{
-      color:#b8c9da;
-      font-size:13px;
-      line-height:1.4;
-      max-width:360px;
-      margin:10px auto 0;
+    .description {
+      max-width: 520px;
+      margin: 0 auto;
+      color: #b8c9dd;
+      font-size: 17px;
+      line-height: 1.45;
     }
 
-    /* BANK CARD */
+    /* TARJETA */
 
-    .bank-card{
-      margin-top:20px;
-      background:#fff;
-      border-radius:24px;
-      padding:22px 18px 18px;
-      color:#102949;
-      box-shadow:0 18px 50px rgba(0,0,0,.24);
+    .card {
+      background: rgba(39, 69, 105, 0.82);
+      border: 1px solid rgba(255,255,255,0.20);
+      border-radius: 28px;
+      padding: 27px 28px 25px;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.16);
     }
 
-    .bank-name{
-      text-align:center;
-      font-size:25px;
-      font-weight:900;
-      letter-spacing:1.5px;
-      color:#154c86;
-      margin-bottom:18px;
+    .bank-title {
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      color: #b9d6ff;
+      margin-bottom: 25px;
     }
 
-    .bank-row{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      padding:17px 0;
-      border-top:1px solid #dce5ef;
+    .bank-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
     }
 
-    .info{
-      min-width:0;
-      flex:1;
+    .bank-info {
+      flex: 1;
+      min-width: 0;
     }
 
-    .label{
-      color:#6d8198;
-      font-size:11px;
-      letter-spacing:1.4px;
-      text-transform:uppercase;
-      margin-bottom:5px;
+    .label {
+      color: #9eb5cf;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 15px;
+      margin-bottom: 8px;
     }
 
-    .value{
-      color:#0c2444 !important;
-      -webkit-text-fill-color:#0c2444;
-      text-decoration:none !important;
-      font-size:24px;
-      font-weight:800;
-      line-height:1;
-      white-space:nowrap;
+    .number {
+      color: white;
+      font-size: 37px;
+      line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: 1px;
+      word-break: break-word;
     }
 
-    .copy-btn{
-      flex:0 0 auto;
-      border:none;
-      border-radius:12px;
-      padding:13px 16px;
-      background:#eaf3fb;
-      color:#0b5fa9;
-      font-size:12px;
-      font-weight:800;
-      cursor:pointer;
+    .bank-logo {
+      width: 68px;
+      height: 68px;
+      object-fit: contain;
+      flex-shrink: 0;
+      background: white;
+      border-radius: 14px;
+      padding: 8px;
     }
 
-    .copy-btn:active{
-      transform:scale(.97);
+    .copy-button {
+      width: 100%;
+      border: none;
+      border-radius: 18px;
+      background: white;
+      color: #102f55;
+      font-size: 17px;
+      font-weight: 800;
+      padding: 20px 16px;
+      margin-top: 19px;
+      cursor: pointer;
+      transition: transform .15s ease, opacity .15s ease;
     }
 
-    /* VERSE */
-
-    .verse{
-      margin-top:20px;
-      padding:18px 16px;
-      border-radius:18px;
-      border:1px solid rgba(88,166,240,.28);
-      background:rgba(7,32,61,.42);
-      text-align:center;
+    .copy-button:active {
+      transform: scale(.98);
+      opacity: .9;
     }
 
-    .verse-text{
-      font-family:Georgia, "Times New Roman", serif;
-      font-style:italic;
-      color:#dde6ef;
-      font-size:14px;
-      line-height:1.5;
+    .divider {
+      height: 1px;
+      background: rgba(255,255,255,.15);
+      margin: 26px 0;
     }
 
-    .verse-ref{
-      margin-top:8px;
-      color:#67a9e6;
-      font-size:10px;
-      letter-spacing:1.8px;
-      text-transform:uppercase;
+    /* MENSAJE DE CONFIANZA */
+
+    .trust {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 25px;
+      text-align: center;
     }
 
-    .footer{
-      margin-top:18px;
-      text-align:center;
-      color:#748ba4;
-      font-size:9px;
-      letter-spacing:1.5px;
-      text-transform:uppercase;
+    .trust-item {
+      padding: 0 8px;
+      color: #c6d6e8;
+      font-size: 13px;
+      line-height: 1.35;
     }
 
-    /* TOAST */
-
-    #toast{
-      position:fixed;
-      left:50%;
-      bottom:24px;
-      transform:translateX(-50%) translateY(20px);
-      background:#fff;
-      color:#102949;
-      padding:12px 18px;
-      border-radius:40px;
-      font-size:13px;
-      font-weight:700;
-      opacity:0;
-      visibility:hidden;
-      transition:.25s;
-      box-shadow:0 12px 30px rgba(0,0,0,.25);
-      white-space:nowrap;
+    .trust-item + .trust-item {
+      border-left: 1px solid rgba(255,255,255,.20);
     }
 
-    #toast.show{
-      opacity:1;
-      visibility:visible;
-      transform:translateX(-50%) translateY(0);
+    .trust-icon {
+      width: 43px;
+      height: 43px;
+      margin: 0 auto 9px;
+      border: 1px solid #58a9ff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 19px;
     }
 
-    /* MOBILE */
+    /* FOOTER */
 
-    @media(max-width:600px){
+    .footer {
+      text-align: center;
+      padding: 28px 5px 0;
+    }
 
-      body{
-        padding:20px 14px 30px;
+    .blessing {
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      color: #cbd7e5;
+      font-size: 17px;
+      line-height: 1.4;
+      margin-bottom: 22px;
+    }
+
+    .footer-name {
+      color: #829ab6;
+      font-size: 12px;
+      letter-spacing: 3px;
+      line-height: 1.6;
+      text-transform: uppercase;
+    }
+
+    /* CELULAR */
+
+    @media (max-width: 480px) {
+
+      body {
+        padding: 18px 16px 35px;
       }
 
-      .logo{
-        width:68px;
-        height:68px;
+      .church-logo {
+        width: 78px;
+        height: 78px;
+        margin-bottom: 10px;
       }
 
-      .hero{
-        margin-top:13px;
+      .church-name {
+        font-size: 14px;
+        letter-spacing: 3px;
       }
 
-      .eyebrow{
-        font-size:14px;
+      .church-header {
+        margin-bottom: 18px;
       }
 
-      h1{
-        font-size:36px;
+      .hero {
+        margin-bottom: 23px;
       }
 
-      .subtitle{
-        font-size:12.5px;
-        margin-top:8px;
+      .eyebrow {
+        font-size: 18px;
       }
 
-      .bank-card{
-        margin-top:17px;
-        padding:20px 17px 16px;
+      h1 {
+        font-size: 51px;
+        margin-bottom: 12px;
       }
 
-      .bank-name{
-        font-size:23px;
-        margin-bottom:15px;
+      .description {
+        font-size: 15px;
+        line-height: 1.4;
       }
 
-      .bank-row{
-        padding:15px 0;
+      .card {
+        border-radius: 24px;
+        padding: 24px 22px;
       }
 
-      .value{
-        font-size:22px;
+      .bank-title {
+        font-size: 22px;
+        letter-spacing: 3px;
+        margin-bottom: 22px;
       }
 
-      .copy-btn{
-        padding:12px 14px;
-        font-size:11.5px;
+      .number {
+        font-size: 31px;
       }
 
-      .verse{
-        margin-top:17px;
-        padding:16px 14px;
+      .bank-logo {
+        width: 58px;
+        height: 58px;
       }
 
-      .verse-text{
-        font-size:13px;
-      }
-    }
-
-    @media(max-width:380px){
-
-      h1{
-        font-size:33px;
+      .copy-button {
+        padding: 18px 12px;
+        font-size: 16px;
       }
 
-      .value{
-        font-size:20px;
+      .trust-item {
+        font-size: 11px;
+        padding: 0 5px;
       }
 
-      .copy-btn{
-        padding:11px 12px;
-        font-size:11px;
+      .trust-icon {
+        width: 38px;
+        height: 38px;
       }
     }
+
   </style>
 </head>
 
@@ -297,16 +315,21 @@
 
   <main class="page">
 
-    <img
-      class="logo"
-      src="LOGO OPTIMIZADO.png"
-      alt="Iglesia Jesucristo Rey y Señor"
-    >
+    <header class="church-header">
 
-    <div class="church">
-      IGLESIA JESUCRISTO<br>
-      REY Y SEÑOR
-    </div>
+      <img
+        src="LOGO OPTIMIZADO.png"
+        alt="Iglesia Jesucristo Rey y Señor"
+        class="church-logo"
+      >
+
+      <div class="church-name">
+        IGLESIA JESUCRISTO<br>
+        REY Y SEÑOR
+      </div>
+
+    </header>
+
 
     <section class="hero">
 
@@ -319,110 +342,170 @@
         Donaciones
       </h1>
 
-      <p class="subtitle">
+      <p class="description">
         Gracias por contribuir y ser parte de la obra que Dios está haciendo.
       </p>
 
     </section>
 
-    <section class="bank-card">
 
-      <div class="bank-name">
+    <section class="card">
+
+      <div class="bank-title">
         BANRESERVAS
       </div>
 
+
+      <!-- NÚMERO DE CUENTA -->
+
       <div class="bank-row">
 
-        <div class="info">
-          <div class="label">Número de cuenta</div>
-          <div class="value">9605763918</div>
+        <div class="bank-info">
+
+          <div class="label">
+            Número de cuenta
+          </div>
+
+          <div class="number">
+            9605763918
+          </div>
+
         </div>
 
-        <button
-          class="copy-btn"
-          onclick="copiar('9605763918','Cuenta copiada')"
+        <img
+          src="logo-banreservas.png"
+          alt="Banreservas"
+          class="bank-logo"
         >
-          COPIAR
-        </button>
 
       </div>
 
-      <div class="bank-row">
+      <button
+        class="copy-button"
+        onclick="copyText('9605763918', this, 'NÚMERO DE CUENTA')"
+      >
+        COPIAR NÚMERO DE CUENTA
+      </button>
 
-        <div class="info">
-          <div class="label">RNC</div>
-          <div class="value">430144894</div>
+
+      <div class="divider"></div>
+
+
+      <!-- RNC -->
+
+      <div class="label">
+        RNC
+      </div>
+
+      <div class="number">
+        430144894
+      </div>
+
+      <button
+        class="copy-button"
+        onclick="copyText('430144894', this, 'RNC')"
+      >
+        COPIAR RNC
+      </button>
+
+
+      <!-- CONFIANZA -->
+
+      <div class="trust">
+
+        <div class="trust-item">
+
+          <div class="trust-icon">
+            ✓
+          </div>
+
+          Seguro<br>
+          y confiable
+
         </div>
 
-        <button
-          class="copy-btn"
-          onclick="copiar('430144894','RNC copiado')"
-        >
-          COPIAR
-        </button>
+
+        <div class="trust-item">
+
+          <div class="trust-icon">
+            ♡
+          </div>
+
+          Tu aporte<br>
+          transforma
+
+        </div>
+
+
+        <div class="trust-item">
+
+          <div class="trust-icon">
+            ◉
+          </div>
+
+          Juntos<br>
+          avanzamos
+
+        </div>
 
       </div>
 
     </section>
 
-    <section class="verse">
 
-      <div class="verse-text">
-        “Cada uno dé como propuso en su corazón,
-        no con tristeza ni por necesidad,
-        porque Dios ama al dador alegre.”
+    <footer class="footer">
+
+      <div class="blessing">
+        “Dios bendiga cada semilla sembrada con amor.”
       </div>
 
-      <div class="verse-ref">
-        2 Corintios 9:7
+      <div class="footer-name">
+        IGLESIA JESUCRISTO REY Y SEÑOR
       </div>
 
-    </section>
-
-    <div class="footer">
-      Iglesia Jesucristo Rey y Señor
-    </div>
+    </footer>
 
   </main>
 
-  <div id="toast">Copiado ✓</div>
 
   <script>
-    async function copiar(texto, mensaje){
 
-      try{
-        await navigator.clipboard.writeText(texto);
-        mostrarToast(mensaje + " ✓");
-      }catch(e){
+    async function copyText(text, button, type) {
 
-        const area = document.createElement("textarea");
+      const originalText = button.innerText;
 
-        area.value = texto;
-        area.style.position = "fixed";
-        area.style.opacity = "0";
+      try {
 
-        document.body.appendChild(area);
+        await navigator.clipboard.writeText(text);
 
-        area.select();
+        button.innerText = "✓ " + type + " COPIADO";
+
+        setTimeout(() => {
+          button.innerText = originalText;
+        }, 1800);
+
+      } catch (error) {
+
+        const textarea = document.createElement("textarea");
+
+        textarea.value = text;
+        document.body.appendChild(textarea);
+
+        textarea.select();
         document.execCommand("copy");
 
-        area.remove();
+        textarea.remove();
 
-        mostrarToast(mensaje + " ✓");
+        button.innerText = "✓ " + type + " COPIADO";
+
+        setTimeout(() => {
+          button.innerText = originalText;
+        }, 1800);
+
       }
+
     }
 
-    function mostrarToast(mensaje){
-
-      const toast = document.getElementById("toast");
-
-      toast.textContent = mensaje;
-      toast.classList.add("show");
-
-      setTimeout(() => {
-        toast.classList.remove("show");
-      }, 1800);
-    }
   </script>
 
 </body>
