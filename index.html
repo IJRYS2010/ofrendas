@@ -109,26 +109,26 @@
 
 
     /* =========================
-       TARJETA TRANSLÚCIDA
+       TARJETA CRISTAL CLARO
     ========================= */
 
     .card{
       margin-top:19px;
 
-      /* Cristal transparente */
-      background:rgba(255,255,255,0.055);
+      /* Translúcido más claro */
+      background:rgba(255,255,255,0.13);
 
-      border:1px solid rgba(255,255,255,0.20);
+      border:1px solid rgba(255,255,255,0.28);
       border-radius:24px;
 
       padding:22px 19px;
 
-      backdrop-filter:blur(12px);
-      -webkit-backdrop-filter:blur(12px);
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
 
       box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.08),
-        0 14px 35px rgba(0,0,0,0.12);
+        inset 0 1px 0 rgba(255,255,255,0.15),
+        0 14px 35px rgba(0,0,0,0.10);
     }
 
 
@@ -148,7 +148,7 @@
     }
 
     .label{
-      color:#a9bed5;
+      color:#c3d2e2;
       font-size:11px;
       letter-spacing:1.8px;
       text-transform:uppercase;
@@ -175,7 +175,6 @@
     .bank-logo{
       width:52px;
       height:52px;
-
       object-fit:contain;
 
       flex:0 0 52px;
@@ -192,7 +191,6 @@
 
     .copy-button{
       width:100%;
-
       margin-top:17px;
 
       border:1px solid rgba(255,255,255,.85);
@@ -230,7 +228,7 @@
     .divider{
       height:1px;
 
-      background:rgba(255,255,255,.16);
+      background:rgba(255,255,255,.22);
 
       margin:22px 0;
     }
@@ -279,7 +277,7 @@
 
 
     /* =========================
-       AVISO "COPIADO"
+       AVISO COPIADO
     ========================= */
 
     #toast{
@@ -311,6 +309,8 @@
       transition:.25s;
 
       white-space:nowrap;
+
+      z-index:1000;
     }
 
     #toast.show{
@@ -362,14 +362,22 @@
 
       .card{
         margin-top:17px;
+
         padding:20px 17px;
 
         border-radius:22px;
 
-        background:rgba(255,255,255,0.05);
+        /* MISMO TRANSLÚCIDO CLARO EN CELULAR */
+        background:rgba(255,255,255,0.13);
 
-        backdrop-filter:blur(11px);
-        -webkit-backdrop-filter:blur(11px);
+        border:1px solid rgba(255,255,255,0.28);
+
+        backdrop-filter:blur(14px);
+        -webkit-backdrop-filter:blur(14px);
+
+        box-shadow:
+          inset 0 1px 0 rgba(255,255,255,0.15),
+          0 14px 35px rgba(0,0,0,0.10);
       }
 
       .label{
